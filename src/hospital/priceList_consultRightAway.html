@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_close.html',{
+      title:"Consult Right Away"
+    })
+    <div class="wrap__content--t">
+      <div class="content">
+        <div class="info-input">
+          <ul>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-name clearInput" placeholder="이름">
+              </div>
+            </li>
+            <li>
+              <select class="select-box">
+                <option>절개눈매교정</option>
+                <option>절개눈매교정</option>
+                <option>절개눈매교정</option>
+              </select>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-hospital clearInput" placeholder="병원명">
+              </div>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="number" class="input-txt input-phone clearInput" placeholder="- 없이 휴대폰 번호 숫자만 입력하세요.">
+              </div>
+            </li>
+            <li>
+              <input type="text" class="input-txt date-picker" placeholder="연락 가능한 일자를 선택하세요." readonly="readonly" name="selectDate">
+            </li>
+            <li>
+              <select class="select-box">
+                <option>01:00</option>
+                <option>02:00</option>
+                <option>03:00</option>
+              </select>
+              </li>
+            <li>
+              <textarea class="input-textarea" placeholder="시술에 대한 궁금증이나 상담하고자 하는 내용을 120자 이내로 작성해 주세요." maxlength="120"></textarea>
+              <div class="input-lengthCheck">
+                <strong class="input-lengthCheck__num">0</strong><span>/</span><span class="input-lengthCheck__total">120</span>
+              </div>
+            </li>
+          </ul>
+        </div>        
+      </div>
+      <!-- S:Bottom Btn -->
+      <div class="btns-bottom">
+        <ul>
+          <li><button class="btn-consult--gray">Cancle</button></li>
+          <li><button class="btn-consult--blue btn-submit" disabled>Submit</button></li>
+        </ul>
+      </div>
+      <!-- E:Bottom Btn -->
+    </div>
+  </div>
+  <script>
+    
+    //날짜 선택
+    var localeFormat = {
+        format: 'YYYY-MM-DD',
+        "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+        "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+      }
+    $('input[name="selectDate"]').daterangepicker({
+      autoApply: true,
+      autoUpdateInput: true,
+      singleDatePicker: true,
+      locale: localeFormat
+    });
+    $('input[name="selectDate"]').val('');
+    
+    $(".clearInput").clearInput({
+      value: ""      
+    });
+
+    //Textarea 길이 체크 및 Submit 버튼 활성화 체크
+    $(".input-textarea").keyup(function (evt) {
+      var count = $(this).val().length;
+      $(".input-lengthCheck__num").html(count);
+      if (count > 0) {
+        $(".btn-submit").removeAttr("disabled");
+      } else {
+        $(".btn-submit").attr("disabled", "disabled");
+      }
+
+    });
+
+
+  </script>
+</body>
+
+</html>

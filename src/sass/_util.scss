@@ -1,0 +1,53 @@
+$header_h : 40px;
+$footer_h : 50px;
+$side-padding : 13px;
+$black-color: #111111;
+$red-color: #de365f;
+$blue-color:#2d3a7e;
+$lightBlue-color:#e9ebf4;
+$lightMoreBlue-color: #f2f3f8;
+
+@function fontFamily($lang){
+  @if $lang == ko {
+    @return AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;
+  } @else if $lang == eng{
+    @return Arial, Helvetica, sans-serif;
+  } @else {
+    @return Arial, Helvetica, sans-serif;
+  }
+}
+
+
+@mixin textEllipsis($rows){
+  @if $rows == 1{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+  } @else{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: normal; 
+    line-height: 18px; 
+    height: 38px; 
+    text-align: left; 
+    word-wrap: break-word; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin textIndent(){
+  text-indent: -5000px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+@mixin clearfix(){
+  content:" "; 
+  display:block; 
+  height:0; 
+  clear:both; 
+  visibility:hidden;
+}

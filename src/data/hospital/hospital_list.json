@@ -1,0 +1,66 @@
+[
+  {
+    "score": "2",
+    "like": "10",
+    "likeCheck": true,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",    
+    "logo": "../images//logo/icon_1.png"
+  },
+  {
+    "score": "2",
+    "like": "10",
+    "likeCheck": false,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_2.png"
+  },
+  {
+    "score": "5",
+    "like": "10",
+    "likeCheck": false,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_3.png"
+  },
+  {
+    "score": "1",
+    "like": "10",
+    "likeCheck": false,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_2.png"
+  },
+  {
+    "score": "0",
+    "like": "10",
+    "likeCheck": true,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_1.png"
+  },
+  {
+    "score": "1",
+    "like": "10",
+    "likeCheck": true,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_1.png"
+  },
+  {
+    "score": "0",
+    "like": "10",
+    "likeCheck": false,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_1.png"
+  },
+  {
+    "score": "4",
+    "like": "10",
+    "likeCheck": false,
+    "hospitalName": "코리아 성형외과",
+    "info": "Face Contouring, Anti-aging",
+    "logo": "../images//logo/icon_1.png"
+  }
+]

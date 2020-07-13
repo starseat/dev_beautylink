@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        @@include('../include/head.html',{ webRoot:"../" })
+    </head>
+
+    <body>
+        <div class="wrap">
+            @@include('../include/header_sub_useBackMenu.html',{ title:"Write Review" })
+            <div class="wrap__content--t">
+                <div class="content">
+                    <div class="write-review">
+                        <div class="write-info">
+                            <span class="write-info__icon"></span>
+                            <span class="write-info__title">절개눈매교정</span>
+                            <div class="write-info__hospital"><img src="../images/logo/icon_hospital.png" alt="icon">코리아성형외과의원</div>
+                        </div>
+
+                        <!-- S: 사진등록 -->
+                        <div class="write-photo">
+                            <div class="write-photo__title">사진 등록</div>
+                            <div class="write-photo__info">※ Before/After 각각 한 장씩, 두 장의 사진은
+                                <strong>필수</strong>
+                                입니다.</div>
+                            <div class="write-photo__after">
+                                <div class="photo-list after">
+                                    <ul>
+                                        <li class="photo-item">
+                                            <span class="photo-txt">After</span>
+                                            <span class="photo-list__info">리뷰 대표이미지로<br>사용됩니다.</span>
+                                            <img class="photo-bg" src="../images/img_blank_photo.png" alt="photo">
+                                            <div class="hiddenfile">
+                                                <input type="file" data-clear-btn="false" name="image" accept="image/*">
+                                            </div>
+                                            <div class="photo-load"></div>
+                                            <button class="btn-chooseFile"></button>
+                                        </li>
+                                        <li class="photo-item">
+                                            <span class="photo-txt">After</span>
+                                            <img class="photo-bg" src="../images/img_blank_photo.png" alt="photo">
+                                            <div class="hiddenfile">
+                                                <input type="file" data-clear-btn="false" name="image" accept="image/*">
+                                            </div>
+                                            <div class="photo-load"></div>
+                                            <button class="btn-chooseFile"></button>
+                                        </li>
+                                        <li class="photo-item">
+                                            <span class="photo-txt">After</span>
+                                            <img class="photo-bg" src="../images/img_blank_photo.png" alt="photo">
+                                            <div class="hiddenfile">
+                                                <input type="file" data-clear-btn="false" name="image" accept="image/*">
+                                            </div>
+                                            <div class="photo-load"></div>
+                                            <button class="btn-chooseFile"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="write-photo__before">
+                                <div class="photo-list before">
+                                    <ul>
+                                        <li class="photo-item">
+                                            <span class="photo-txt">Before</span>
+                                            <img class="photo-bg" src="../images/img_blank_photo.png" alt="photo">
+                                            <div class="hiddenfile">
+                                                <input type="file" data-clear-btn="false" name="image" accept="image/*">
+                                            </div>
+                                            <div class="photo-load"></div>
+                                            <button class="btn-chooseFile"></button>
+                                        </li>
+                                        <li class="photo-item">
+                                            <span class="photo-txt">Before</span>
+                                            <img class="photo-bg" src="../images/img_blank_photo.png" alt="photo">
+                                            <div class="hiddenfile">
+                                                <input type="file" data-clear-btn="false" name="image" accept="image/*">
+                                            </div>
+                                            <div class="photo-load"></div>
+                                            <button class="btn-chooseFile"></button>
+                                        </li>
+                                        <li class="photo-item">
+                                            <span class="photo-txt">Before</span>
+                                            <img class="photo-bg" src="../images/img_blank_photo.png" alt="photo">
+                                            <div class="hiddenfile">
+                                                <input type="file" data-clear-btn="false" name="image" accept="image/*">
+                                            </div>
+                                            <div class="photo-load"></div>
+                                            <button class="btn-chooseFile"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E: 사진등록 -->
+
+                        <div class="write-star medical">
+                            <div class="write-star__title">시술은 만족하셨나요?</div>
+                            <div class="write-star__btns">
+                                <ul>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                </ul>
+                            </div>
+                            <div class="write-star__result"></div>
+                        </div>
+
+                        <div class="write-star hospital">
+                            <div class="write-star__title">병원은 어떠셨나요?</div>
+                            <div class="write-star__btns">
+                                <ul>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                    <li>
+                                        <span class="write-btn"></span></li>
+                                </ul>
+                            </div>
+                            <div class="write-star__result"></div>
+                        </div>
+
+                        <div class="input-star">
+                            <div class="input-star__title">어떤점이 좋으셨나요?</div>
+                            <div class="info-input">
+                                <textarea
+                                    class="input-textarea"
+                                    placeholder="시술에 대한 후기를 남겨주세요. 최소 10자 이상"
+                                    maxlength="120"></textarea>
+                                <div class="input-lengthCheck">
+                                    <strong class="input-lengthCheck__num">0</strong>
+                                    <span>/</span><span class="input-lengthCheck__total">120</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="btns-bottom">
+                    <ul>
+                        <li>
+                            <button href="javascript:;" class="btn-consult--gray">Cancle</button>
+                        </li>
+                        <li>
+                            <button
+                                href="javascript:;"
+                                class="btn-consult--blue btn-submit"
+                                disabled="disabled">Submit</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+            //header Context Menu
+            var headerPopMenu = new HeaderPopMenu();
+            headerPopMenu.add();
+
+            //별점
+            var starMessage = ["Bad!", "Not Bad!", "So So!", "Good!", "Nice Good!"]
+            var messageLength = 0;
+            $(".write-btn").on("click", function () {
+                var index = $(this)
+                    .parent()
+                    .index();
+                $(this)
+                    .closest(".write-star__btns")
+                    .removeClass("star1 star2 star3 star4 star5")
+                    .addClass("star" + (
+                        index + 1
+                    ))
+                    .next(".write-star__result")
+                    .text((index + 1) + "Point (" + starMessage[index] + ")");
+
+                var commentMessage = "시술에 대해 만족도 " + (
+                    index + 1
+                ) + "점을 주셨네요.<br>어떤 점이 좋으셨나요?";
+
+                if ($(this).closest(".write-star").hasClass("medical")) {
+                    $(".input-star__title").html(commentMessage);
+                }
+            });
+
+            //Textarea 길이 체크 및 Submit 버튼 활성화 체크
+            $(".input-textarea").keyup(function (evt) {
+                messageLength = $(this)
+                    .val()
+                    .length;
+                $(".input-lengthCheck__num").html(messageLength);
+                submitState();
+            });
+
+            function submitState(){
+                if (messageLength > 9 && ImageUpload.checkImageInsert()) {
+                    $(".btn-submit").removeAttr("disabled");
+                } else {
+                    $(".btn-submit").attr("disabled", "disabled");
+                }
+            }
+            
+            //이미지 삽입
+            var ImageUpload = (function () {
+                var images = {
+                    after: ["", "", ""],
+                    before: ["", "", ""]
+                }
+
+                $(".btn-chooseFile").click(function (e) {
+                    e.preventDefault();
+                    $(this)
+                        .closest(".photo-item")
+                        .find("input[type=file]")
+                        .trigger("click");
+                });
+
+                $("input[type=file]").change(function () {
+                    var file = $(this)[0].files[0];
+                    if (file === undefined) {
+                        return
+                    }
+                    var photoSelector = $(this)
+                        .closest(".hiddenfile")
+                        .next(".photo-load");
+                    photoSelector.empty();
+                    // $(".photo-load").empty();
+                    insertAddImage(file, photoSelector);
+                });
+
+                function insertAddImage(file, target) {
+                    if (typeof FileReader !== "undefined") {
+                        var container = target,
+                            img = document.createElement("img"),
+                            reader;
+                        container.append(img);
+                        container
+                            .closest(".photo-item").find(".btn-deletePhoto").remove();
+                        container
+                            .closest(".photo-item")
+                            .append(
+                                "<span class='btn-deletePhoto' onclick='ImageUpload.deleteRemoveImage(this)'></span>"
+                            );
+                        reader = new FileReader();
+                        reader.onload = (function (theImg) {                            
+                            return function (evt) {
+                                theImg.src = evt.target.result;
+                            };
+                        }(img));
+                        
+                        reader.readAsDataURL(file);
+
+                        var index = container.closest(".photo-item").index();                        
+                        if( container.closest(".photo-list").hasClass("before") ){
+                            console.log("before")
+                            images.before[index]=file.name;
+                        }else{
+                            console.log("after")
+                            images.after[index]=file.name;
+                        }
+                        console.log(images)                        
+                        submitState();
+                    }
+                }
+
+                
+                function checkImageInsert(){
+                    var after = images.after.filter( function(images){
+                        return images != "";
+                    });
+                    var before = images.before.filter(function (images) {
+                        return images != "";
+                    });
+                    console.log(after, before)     
+                    var result = false;
+                    if( after.length > 0 && before.length > 0 ){
+                        result = true;
+                    }     
+                    return result;          
+                }
+
+                function deleteRemoveImage(target) {
+                    var index = $(target).closest(".photo-item").index(); 
+                    if ($(target).closest(".photo-list").hasClass("before")) {                        
+                        images.before[index] = "";
+                    } else {                        
+                        images.after[index] = "";
+                    }                    
+                    $(target)
+                        .closest(".photo-item")
+                        .find(".photo-load")
+                        .empty();
+                    $(target).remove();
+                    submitState();
+                }
+
+                return{
+                    deleteRemoveImage: deleteRemoveImage,
+                    checkImageInsert: checkImageInsert
+                }
+            })();
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "beauty-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"gulp build",
+    "serve":"gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulder21c/beauty-gulp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mulder21c/beauty-gulp/issues"
+  },
+  "homepage": "https://github.com/mulder21c/beauty-gulp#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.2.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-w3c-html-validation": "0.0.1",
+    "gulp.spritesmith": "^6.9.0",
+    "install": "^0.12.2",
+    "merge-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.8"
+  }
+}

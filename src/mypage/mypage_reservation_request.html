@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        @@include('../include/head.html',{ webRoot:"../" })
+    </head>
+
+    <body>
+        <div class="wrap">
+            @@include('../include/header_sub_useBackMenu_border.html',{ title:"Reservation Request" })
+            <div class="wrap__content--t">
+                <div class="content">
+                    <!-- S: Reservation Info -->
+                    <div class="reservation-info">
+                        <ul>
+                            <li>
+                                <span>Quotation No :</span>
+                                <strong>202001001</strong>
+                            </li>
+                            <li>
+                                <span>Hospital Name :</span>
+                                <strong>Tako PS</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- E: Reservation Info -->
+
+                    <div class="info-input reservation">
+                        <div class="info-input__top">
+                            <h2 class="main-title">Personal Infomation</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="text-input__wrapper">
+                                    <input type="text" class="input-txt input-name clearInput" placeholder="Name">
+                                </div>
+                            </li>
+                            <li>
+                                <select class="select-box">
+                                    <option>Nationality</option>
+                                    <option>Nationality</option>
+                                    <option>Nationality</option>
+                                </select>
+                            </li>
+                            <li>
+                                <input
+                                    type="text"
+                                    class="input-txt date-picker birth"
+                                    placeholder="Birth"
+                                    readonly="readonly"
+                                    name="selectDate">
+                            </li>
+                            <li>
+                                <div class="text-input__wrapper">
+                                    <input
+                                        type="text"
+                                        class="input-txt input-passport clearInput"
+                                        placeholder="Passport No">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-input reservation">
+                        <div class="info-input__top">
+                            <h2 class="main-title">Visit date/time</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <input
+                                    type="text"
+                                    class="input-txt date-picker visit"
+                                    placeholder="Visit date"
+                                    readonly="readonly"
+                                    name="selectDate">
+                            </li>
+                            <li>
+                                <select class="select-box">
+                                    <option>Visit time</option>
+                                    <option>Visit time</option>
+                                    <option>Visit time</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- S:Bottom Btn -->
+                <div class="btns-bottom">
+                    <button class="btn-consult--blue">Make a Reservation
+                    </button>
+                </div>
+                <!-- E:Bottom Btn -->
+            </div>
+        </div>
+        <script>
+            //header Context Menu
+            var headerPopMenu = new HeaderPopMenu();
+            headerPopMenu.add();
+
+            //clear button
+            $(".clearInput").clearInput({value: ""});
+
+            //Birthday
+            var localeFormat = {
+                format: 'YYYY-MM-DD',
+                "daysOfWeek": [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat"
+                ],
+                "monthNames": [
+                    "Jan",
+                    "Feb",
+                    "Mar",
+                    "Apr",
+                    "May",
+                    "June",
+                    "July",
+                    "Aug",
+                    "Sep",
+                    "Oct",
+                    "Nov",
+                    "Dec"
+                ]
+            }
+            $('.date-picker.birth').daterangepicker(
+                {autoApply: true, autoUpdateInput: true, singleDatePicker: true, locale: localeFormat}
+            );
+            $('.date-picker.birth').val('');
+            //visit
+            $('.date-picker.visit').daterangepicker(
+                {autoApply: true, autoUpdateInput: true, singleDatePicker: true, locale: localeFormat}
+            );
+            $('.date-picker.visit').val('');
+        </script>
+    </body>
+
+</html>

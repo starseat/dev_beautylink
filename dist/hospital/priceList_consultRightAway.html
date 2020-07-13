@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+<title>Beauty Link Korea</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="title" content="Beauty Link Korea">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+<link rel="canonical" href="http://www.beautylinkkorea.com/">
+
+<meta name="keywords" content="Beauty Link Korea">
+<meta name="description" content="Beauty Link Korea">
+
+<meta name="twitter:card" content="Summary">
+<meta name="twitter:site" content="@BeautyLinkKorea">
+<meta name="twitter:creator" content="@BeautyLinkKorea">
+<meta name="twitter:url" content="http://www.beautylinkkorea.com/">
+<meta name="twitter:title" content="Beauty Link Korea">
+<meta name="twitter:description" content="Beauty Link Korea">
+<meta name="twitter:image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta property="og:url" content="http://www.beautylinkkorea.com/">
+<meta property="og:image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beauty Link Korea">
+<meta property="og:locale" content="ko">
+<meta property="og:title" content="Beauty Link Korea">
+<meta property="og:description" content="Beauty Link Korea">
+<meta property="og:country-name" content="sec">
+
+<meta itemprop="name" content="Beauty Link Kore">
+<meta itemprop="image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta itemprop="url" content="http://www.beautylinkkorea.com/">
+<meta itemprop="description" content="Beauty Link Korea">
+<meta itemprop="keywords" content="Beauty Link Korea">
+
+<link rel="stylesheet" href=../css/beauty.min.css>
+
+<script type="text/javascript" src=../js/plugin/jquery-3.4.1.min.js></script>
+<script type="text/javascript" src=../js/plugin/swiper.min.js></script>
+<script type="text/javascript" src=../js/plugin/beauty.clearInput.js></script>
+<script type="text/javascript" src=../js/plugin/moment-with-locales.js></script>
+<script type="text/javascript" src=../js/plugin/daterangepicker.js></script>
+<script type="text/javascript" src=../js/uiControl.common.js></script>
+
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header header-close">
+  <div class="header__title-wrap">
+    <h1 class="header__title">Consult Right Away</h1>
+  </div>
+  <a href="javascript:;" class="header__closeBtn">Close</a>
+</header>
+    <div class="wrap__content--t">
+      <div class="content">
+        <div class="info-input">
+          <ul>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-name clearInput" placeholder="이름">
+              </div>
+            </li>
+            <li>
+              <select class="select-box">
+                <option>절개눈매교정</option>
+                <option>절개눈매교정</option>
+                <option>절개눈매교정</option>
+              </select>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-hospital clearInput" placeholder="병원명">
+              </div>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="number" class="input-txt input-phone clearInput" placeholder="- 없이 휴대폰 번호 숫자만 입력하세요.">
+              </div>
+            </li>
+            <li>
+              <input type="text" class="input-txt date-picker" placeholder="연락 가능한 일자를 선택하세요." readonly="readonly" name="selectDate">
+            </li>
+            <li>
+              <select class="select-box">
+                <option>01:00</option>
+                <option>02:00</option>
+                <option>03:00</option>
+              </select>
+              </li>
+            <li>
+              <textarea class="input-textarea" placeholder="시술에 대한 궁금증이나 상담하고자 하는 내용을 120자 이내로 작성해 주세요." maxlength="120"></textarea>
+              <div class="input-lengthCheck">
+                <strong class="input-lengthCheck__num">0</strong><span>/</span><span class="input-lengthCheck__total">120</span>
+              </div>
+            </li>
+          </ul>
+        </div>        
+      </div>
+      <!-- S:Bottom Btn -->
+      <div class="btns-bottom">
+        <ul>
+          <li><button class="btn-consult--gray">Cancle</button></li>
+          <li><button class="btn-consult--blue btn-submit" disabled>Submit</button></li>
+        </ul>
+      </div>
+      <!-- E:Bottom Btn -->
+    </div>
+  </div>
+  <script>
+    
+    //날짜 선택
+    var localeFormat = {
+        format: 'YYYY-MM-DD',
+        "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
+        "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+      }
+    $('input[name="selectDate"]').daterangepicker({
+      autoApply: true,
+      autoUpdateInput: true,
+      singleDatePicker: true,
+      locale: localeFormat
+    });
+    $('input[name="selectDate"]').val('');
+    
+    $(".clearInput").clearInput({
+      value: ""      
+    });
+
+    //Textarea 길이 체크 및 Submit 버튼 활성화 체크
+    $(".input-textarea").keyup(function (evt) {
+      var count = $(this).val().length;
+      $(".input-lengthCheck__num").html(count);
+      if (count > 0) {
+        $(".btn-submit").removeAttr("disabled");
+      } else {
+        $(".btn-submit").attr("disabled", "disabled");
+      }
+
+    });
+
+
+  </script>
+</body>
+
+</html>

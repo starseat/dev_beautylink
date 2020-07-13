@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        @@include('../include/head.html',{ webRoot:"../" })
+    </head>
+
+    <body>
+        <div class="wrap">
+            @@include('../include/header_sub_nonBackMenu.html',{ title:"My Page" })
+            <div class="wrap__content--tb">
+                <div class="content">
+                    <!-- S: Mypage UserName-->
+                    <div class="mypage-nickname">
+                        <div class="mypage-nickname__inner">
+                            <div class="mypage-nickname__icon">
+                                <span class="mypage-more__btn">More</span>
+                            </div>
+                            <div class="mypage-nickname__nickname">민트 민들레</div>
+                            <div class="mypage-nickname__name">황지희</div>
+                            <a href="javascript:;" class="hospital-detail__btn--link">Link</a>
+                        </div>
+                    </div>
+                    <!-- e: Mypage UserName-->
+
+                    <div class="mypage-link">
+                        <ul>
+                            <li>
+                                <a href="javascript:;" class="mypage-link__btn btn-Favorite">
+                                    <span class="mypage-link__txt">Favorite</span></a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="mypage-link__btn btn-quotation">
+                                    <span class="mypage-link__txt"></span>Quotation</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="mypage-link__btn btn-reservation">
+                                <span class="mypage-link__txt">Reservation</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="mypage-link__btn btn-myreview">
+                                <span class="mypage-link__txt">My Review</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- S: My Surgery-->
+                <section class="pick-preview surgeryItem-slideBanner">
+                    <div class="pick-preview__top">
+                        <h2 class="main-title">My Surgery</h2>
+                        <div class="pick-preview__pagination"></div>
+                        <div class="pick-preview__player--btn on">
+                            <span class="pick-preview__player--icon"></span>
+                        </div>
+                        <span class="btn-more__plug--btn">MORE</span>
+                    </div>
+                    <div class="pick-preview__bottom">
+                        <div class="swiper-container surgery-item__list">
+                            <div class="swiper-wrapper">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- E: My Surgery-->
+
+                <!-- S: Recent View Surgery Item-->
+                <section class="recent-view">
+                    <div class="price-list__top">
+                        <h2 class="main-title">Recent View Surgery Item</h2>
+                    </div>
+                    <div class="price-list__bottom">
+                        <ul class="price-list__list">
+                            <!-- List -->
+                        </ul>
+                    </div>
+                </section>
+                <!-- E: Recent View Surgery Item-->
+            </div>
+
+        </div>
+
+        @@include('../include/footer.html')
+    </div>
+    <script type="text/javascript" src="../js/listjs/hospitalBannerList.js"></script>
+    <script type="text/javascript" src="../js/listjs/mySurgeryList.js"></script>
+    <script>
+        //header Context Menu
+        var headerPopMenu = new HeaderPopMenu();
+        headerPopMenu.add();
+        
+        //My Surgery
+        MySurgeryList.load();
+
+        //Recent View Surgery Item
+        HospitalBannerList.load("../data/mypage/price_list.json");
+    </script>
+</body>
+
+</html>

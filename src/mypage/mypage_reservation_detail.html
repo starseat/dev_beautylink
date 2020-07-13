@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBackMenu_border.html',{
+      title:"Reservation Detail"
+    })
+    <div class="wrap__content--t">
+      <div class="content">
+        <!-- S: Reservation Info -->
+        <div class="reservation-info">
+          <ul>
+            <li><span>Quotation No :</span> <strong>202001001</strong></li>
+            <li><span>Hospital Name :</span> <strong>Tako PS</strong></li>
+            <li><span>Visit date/time :</span> <strong>07 JUL 2020 / 14:00</strong></li>
+          </ul>
+        </div>
+        <!-- E: Reservation Info --> 
+
+        <div class="reservation-infomation">
+          <div class="info-input__top">
+            <h2 class="main-title pt10">Personal Infomation</h2>
+          </div>
+          <div class="quotation-proposal__info reservation">
+            <ol>
+              <li>Surname : AKKATEHTPAKIN</li>
+              <li>Name : GHIDAPA</li>
+              <li>Nationality : THAI</li>
+              <li>Birth : 07 JAN 1994</li>
+              <li>Passport No : M12340000</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="reservation-infomation confirmed">
+          <div class="info-input__top">
+            <h2 class="main-title pt10">Confirmed Infomation</h2>
+          </div>
+          <div class="quotation-proposal__info reservation">
+            <ol>
+              <li>Confirmed Date/Time : <strong class="info-point">08 JUL 2020 / 14:00</strong></li>
+              <li>Hospital : <strong class="info-point">Tako PS</strong></li>
+              <li>Contact Person : <strong class="info-point">Park Hong Gil</strong></li>
+              <li>Contact No : <strong class="info-point">+82-10-7757-8099</strong></li>
+              <li>Deposit : <strong class="info-point">100,000 KRW</strong></li>
+            </ol>
+          </div>
+          <div class="txt-info__check">※ The hospital will send you a guidance email.</div>
+        </div>
+        
+          
+
+        
+        
+      </div>
+      <!-- S:Bottom Btn -->
+      <div class="btns-bottom divide-50">
+        <ul>
+          <li><button class="btn-consult--gray">Cancle Reservation</button></li>
+          <li><button class="btn-consult--blue">Amendment Request</button></li>
+        </ul>
+      </div>
+      <!-- E:Bottom Btn -->
+    </div>
+  </div>
+  <script>
+    //header Context Menu
+    var headerPopMenu = new HeaderPopMenu();
+    headerPopMenu.add();
+    
+    
+    
+  </script>
+</body>
+
+</html>

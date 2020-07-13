@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBackMenu_border.html',{
+      title:"Quotation"
+    })
+    <div class="wrap__content--tb">
+      <div class="content">
+        
+        <!-- S: Quotation List -->
+        <div class="quotation">
+          <div class="quotation-list">
+            <div class="quotation-list__top">
+              <ul>
+                <li><a href="javascript:;" class="quotation-filter filter-all__btn on" data-quotation="all">ALL</a></li>
+                <li><a href="javascript:;" class="quotation-filter filter-request__btn" data-quotation="request"><span class="filter-icon"></span>ON REQUEST</a></li>
+                <li><a href="javascript:;" class="quotation-filter filter-complete__btn" data-quotation="complete"><span class="filter-icon"></span>COMPLETE</a></li>
+              </ul>
+            </div>  
+            <div class="quotation-list__bottom">
+              <ul>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- E: Quotation List -->
+        
+      </div>
+      
+    </div>
+    
+
+    @@include('../include/footer.html')
+  </div>
+  <script type="text/javascript" src="../js/listjs/quotationList.js"></script>
+  <script>
+    //header Context Menu
+    var headerPopMenu = new HeaderPopMenu();
+    headerPopMenu.add();
+    
+    //filter
+    $(".quotation-filter").on("click", function(){
+      $(".quotation-filter").removeClass("on");
+      $(this).addClass("on");    
+      var state = $(this).attr("data-quotation");
+      console.log(state)
+      QuotationList.load(state);
+    })
+    
+    QuotationList.load("all");
+  </script>
+</body>
+
+</html>

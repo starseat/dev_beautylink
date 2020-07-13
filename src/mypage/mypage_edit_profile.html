@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBackMenu_border.html',{
+      title:"Edit Profile"
+    })
+    <div class="wrap__content--t">
+      <div class="content">
+        
+        <div class="info-input reservation"> 
+          <div class="info-input__top">
+            <h2 class="main-title">Personal Infomation</h2>
+          </div>
+          <ul>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-name clearInput" placeholder="email">
+              </div>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="password" class="input-txt input-pasword clearInput" placeholder="비밀번호">
+              </div>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-1 clearInput" placeholder="입력">
+              </div>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-2 clearInput" placeholder="입력">
+              </div>
+            </li>
+            <li>
+              <div class="text-input__wrapper">
+                <input type="number" class="input-txt input-3 clearInput" placeholder="입력">
+              </div>
+            </li>
+            <li>
+              <input type="text" class="input-txt date-picker birth" placeholder="Birth" readonly="readonly" name="selectDate">
+            </li> 
+            <li>
+              <div class="text-input__wrapper">
+                <input type="text" class="input-txt input-3 clearInput" placeholder="입력">
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sns-list">
+          <div class="info-input__top">
+            <h2 class="main-title">SNS Connection Information</h2>
+          </div>
+          <ul>            
+            <li>
+              <div class="sns-banner line">
+                Line
+                <span class="check-connection" style="position: absolute;">
+                  <input type="checkbox" id="check-line" name="">
+                  <label for="check-line">연결하기</label>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="sns-banner facebook">
+                Facebook
+                <span class="check-connection" style="position: absolute;">
+                  <input type="checkbox" id="check-facebook" name="">
+                  <label for="check-facebook">연결하기</label>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="sns-banner kakaotalk">
+                Kakaotalk
+                <span class="check-connection" style="position: absolute;">
+                  <input type="checkbox" id="check-kakao" name="">
+                  <label for="check-kakao">연결하기</label>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+      <!-- S:Bottom Btn -->
+      <div class="btns-bottom">
+        <ul>
+          <li><button class="btn-consult--gray">Cancle</button></li>
+          <li><button class="btn-consult--blue">Modify</button></li>
+        </ul>
+      </div>
+      <!-- E:Bottom Btn -->
+    </div>
+  </div>
+  <script>
+    //header Context Menu
+    var headerPopMenu = new HeaderPopMenu();
+    headerPopMenu.add();
+    
+    //Name
+    $(".clearInput").clearInput({
+      value: ""
+    });    
+
+    //Birthday
+    var localeFormat = {
+      format: 'YYYY-MM-DD',
+      "daysOfWeek": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      "monthNames": ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    }
+    $('.date-picker.birth').daterangepicker({
+      autoApply: true,
+      autoUpdateInput: true,
+      singleDatePicker: true,
+      locale: localeFormat
+    });
+    $('.date-picker.birth').val('');
+    //visit
+    $('.date-picker.visit').daterangepicker({
+      autoApply: true,
+      autoUpdateInput: true,
+      singleDatePicker: true,
+      locale: localeFormat
+    });
+    $('.date-picker.visit').val('');
+    
+  </script>
+</body>
+
+</html>

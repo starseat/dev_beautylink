@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_nonBack.html',{
+      title:"Review"
+    })
+    <div class="wrap__content--tb">
+      <div class="content pt101">
+        <!-- S: Hospital Search-->
+        <div class="hospital-search fixed-t40">
+          <div class="text-input__wrapper">
+            <input type="email" id="hotpital-name" name="id" placeholder="Search" maxlength="41"
+              class="input-clear hotpital-name">
+            <a href="javascript:;" class="hotpital-search__btn">Search</a>
+          </div>
+        </div>
+        <!-- E: Hospital Search-->
+
+        <!-- S: Surgery Item-->
+        <section class="surgery-items fixed-t86">
+          <ul>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-all on">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">All</span>
+              </div>              
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-eyes">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Eyes</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-nose">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Nose</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-lip">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Lip</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-face">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Contouring</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-breast">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Breast</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-bodyLine">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Body Line</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-skin">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Skin</span></div>
+            </li>
+            <li class="surgery-items__item">
+              <div class="surgery-items__btn item-etc">
+                <span class="surgery-items__btn--icon"></span>
+                <span class="surgery-items__btn--txt">Etc</span></div>
+            </li>
+          </ul>
+        </section>
+        <!-- E: Surgery Item -->
+
+        <!-- S: Pick Review -->
+        <section class="pick-preview review-slideBanner">
+          <div class="pick-preview__top">
+            <h2 class="main-title">Pick Review</h2>
+            <div class="pick-preview__pagination"></div>
+            <div class="pick-preview__player--btn on">
+              <span class="pick-preview__player--icon white"></span>
+            </div>
+          </div>
+          <div class="pick-preview__bottom">
+            <div class="pick-review__list swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="review-item">
+                    <div class="review-item__top">
+                      <div class="item-like round-box">
+                        <span class="item-like__icon on"></span>
+                        <span class="item-like__num">19</span>
+                      </div>
+                      <ul>
+                        <li>
+                          <img src="../images/sample/photo_review1.png" alt="photo">
+                        </li>
+                        <li>
+                          <img src="../images/sample/photo_review2.png" alt="photo">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="review-item__bottom">
+                      <div class="review-keyword">#eyes #nose #lip #face contouring</div>
+                      <div class="review-hospital"><span class="icon-logo"><img src="../images/logo/icon_hospital.png" alt="logo"></span>코리아 성형외과의원</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-item">
+                    <div class="review-item__top">
+                      <div class="item-like round-box">
+                        <span class="item-like__icon on"></span>
+                        <span class="item-like__num">19</span>
+                      </div>
+                      <ul>
+                        <li>
+                          <img src="../images/sample/photo_review1.png" alt="photo">
+                        </li>
+                        <li>
+                          <img src="../images/sample/photo_review2.png" alt="photo">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="review-item__bottom">
+                      <div class="review-keyword">#eyes #nose #lip #face contouring</div>
+                      <div class="review-hospital"><span class="icon-logo"><img src="../images/logo/icon_hospital.png" alt="logo"></span>코리아
+                        성형외과의원</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="review-item">
+                    <div class="review-item__top">
+                      <div class="item-like round-box">
+                        <span class="item-like__icon on"></span>
+                        <span class="item-like__num">19</span>
+                      </div>
+                      <ul>
+                        <li>
+                          <img src="../images/sample/photo_review1.png" alt="photo">
+                        </li>
+                        <li>
+                          <img src="../images/sample/photo_review2.png" alt="photo">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="review-item__bottom">
+                      <div class="review-keyword">#eyes #nose #lip #face contouring</div>
+                      <div class="review-hospital">
+                        <span class="icon-logo"><img src="../images/logo/icon_hospital.png" alt="logo"></span>
+                        코리아 성형외과의원
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- S: Pick Review -->
+         
+        <div class="clean-review">
+          <div class="clean-review__top">
+            <h2 class="main-title">Clean Review</h2>
+          </div>
+          <div class="clean-review__bottom">
+            <ul>
+              <li>
+                <img src="../images/sample/photo1.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo2.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo3.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo1.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo2.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo3.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo1.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo2.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo3.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo1.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo2.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+              <li>
+                <img src="../images/sample/photo3.png" alt="photo">
+                <div class="clean-review__name">홍길동</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    @@include('../include/footer.html')
+  </div>
+  <script>
+    $(".surgery-items__btn").on("click", function(){
+      $(".surgery-items__btn").removeClass("on");
+      $(this).addClass("on");      
+    });
+
+    $("#hotpital-name").clearInput({
+      value: "",
+      onKeyup: function (e) {
+        console.log(e.value)
+      }
+    });
+
+    //Pick Hospital
+    var pickSwiper = new CreateSliderPlayer(".pick-review__list", 'auto'); 
+  </script>
+</body>
+
+</html>

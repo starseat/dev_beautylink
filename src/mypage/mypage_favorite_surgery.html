@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBackMenu.html',{
+      title:"Favorite"
+    })
+    <div class="wrap__content--tb tab-t">
+      <div class="content">
+
+        <div class="price-tab favorite">
+          <ul>
+            <li class="price-tab__item on">
+              <span class="price-tab__btn" onclick="location.href = 'mypage_favorite_surgery.html'">Surgery</span>
+            </li>
+            <li class="price-tab__item">
+              <span class="price-tab__btn" onclick="location.href = 'mypage_favorite_hospital.html'">Hospital</span>
+            </li>
+            <li class="price-tab__item">
+              <span class="price-tab__btn" onclick="location.href = 'mypage_favorite_event.html'">Event</span>
+            </li>
+            <li class="price-tab__item">
+              <span class="price-tab__btn" onclick="location.href = 'mypage_favorite_review.html'">Review</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- S: Recent View Surgery Item-->
+        <section class="recent-view pt13">
+          <div class="price-list__bottom">
+            <ul class="price-list__list">
+            </ul>
+          </div>
+        </section>
+        <!-- E: Recent View Surgery Item-->
+      </div>
+      
+    </div>
+    
+
+    @@include('../include/footer.html')
+  </div>
+  <script type="text/javascript" src=../js/listjs/hospitalBannerList.js></script>
+  <script>
+    //header Context Menu
+    var headerPopMenu = new HeaderPopMenu();
+    headerPopMenu.add();
+
+    HospitalBannerList.load("../data/mypage/price_list.json");    
+  </script>
+</body>
+
+</html>

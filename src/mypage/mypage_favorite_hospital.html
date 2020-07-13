@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        @@include('../include/head.html',{ webRoot:"../" })
+    </head>
+
+    <body>
+        <div class="wrap">
+            @@include('../include/header_sub_useBackMenu.html',{ title:"Favorite" })
+            <div class="wrap__content--tb tab-t">
+                <div class="content">
+
+                    <div class="price-tab favorite">
+                        <ul>
+                            <li class="price-tab__item">
+                                <span
+                                    class="price-tab__btn"
+                                    onclick="location.href = 'mypage_favorite_surgery.html'">Surgery</span>
+                            </li>
+                            <li class="price-tab__item on">
+                                <span
+                                    class="price-tab__btn"
+                                    onclick="location.href = 'mypage_favorite_hospital.html'">Hospital</span>
+                            </li>
+                            <li class="price-tab__item">
+                                <span
+                                    class="price-tab__btn"
+                                    onclick="location.href = 'mypage_favorite_event.html'">Event</span>
+                            </li>
+                            <li class="price-tab__item">
+                                <span
+                                    class="price-tab__btn"
+                                    onclick="location.href = 'mypage_favorite_review.html'">Review</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- S: Hospital List -->
+                    <div class="hospital-list">
+                        <ul></ul>
+                    </div>
+                    <!-- E: Hospital List -->
+
+                </div>
+
+            </div>
+
+            @@include('../include/footer.html')
+        </div>
+        <script type="text/javascript" src="../js/listjs/hospitalList.js"></script>
+        <script>
+            //header Context Menu
+            var headerPopMenu = new HeaderPopMenu();
+            headerPopMenu.add();
+
+            HospitalList.load("popular");
+        </script>
+    </body>
+
+</html>

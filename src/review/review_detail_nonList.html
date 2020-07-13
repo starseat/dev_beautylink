@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBack.html',{
+      title:"Review Detail"
+    })
+    <div class="wrap__content--tb">
+      <div class="content pt40">
+
+        <!-- S: Review Navi-->
+        <div class="hospital-sns fixed-t40">
+          <nav class="review-navi">
+            <div class="hospital-sns__item">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="hospital-sns__btn--favor on">
+                    <span class="icon-sns"></span>
+                    <span class="favor-num">168</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="hospital-sns__btn--like on">
+                    <span class="icon-sns"></span>
+                    <span class="like-num">168</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="hospital-sns__item">
+              <ul>
+                <li>
+                  <a href="javascript:;" class="hospital-sns__btn--share"><span class="icon-sns"></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="hospital-sns__btn--contact"><span class="icon-sns"></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="hospital-sns__btn--write"><span class="icon-sns"></span></a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="hospital-sns__btn--return"><span class="icon-sns"></span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- E: Review Navi -->
+
+        <!-- S: Review Gallery -->
+        <div class="review-gallery">
+          <div class="review-gallery__top">
+            <span class="review-gallery__icon"></span>
+            <div class="review-gallery__name">황지희</div>
+            <div class="review-gallery__date">2020.05.01</div>
+          </div>
+          <div class="review-gallery__list">
+            <ul>
+              <li class="review-gallery__photo">
+                <img src="../images/sample/photo_review.png" alt="photo">
+                <span class="photo-state">Before</span>
+              </li>
+              <li class="review-gallery__photo">
+                <img src="../images/sample/photo_review.png" alt="photo">
+                <span class="photo-state">Before</span>
+              </li>
+              <li class="review-gallery__photo">
+                <img src="../images/sample/photo_review.png" alt="photo">
+                <span class="photo-state">After</span>
+              </li>
+              <li class="review-gallery__photo">
+                <img src="../images/sample/photo_review.png" alt="photo">
+                <span class="photo-state">After</span>
+              </li>
+              <li class="review-gallery__photo">
+                <img src="../images/sample/photo_review.png" alt="photo">
+                <span class="photo-state">After</span>
+              </li>
+              <li class="review-gallery__photo">
+                <img src="../images/sample/photo_review.png" alt="photo">
+                <span class="photo-state">After</span>
+              </li>
+            </ul>
+          </div>
+          <div class="review-gallery__bottom">
+            <div class="surgical-info">
+              <span class="surgical-info__name"><img src="../images/icon_surgeryItem.png" alt="icon">절개눈매교정</span>
+              <div class="surgical-info__score">
+                <span class="hospital-list__score--num">4.0</span>
+                <span class="hospital-list__score--star star-num3"></span>
+              </div>
+            </div>
+            <div class="hospital-info">
+              <span class="hospital-info__name"><img src="../images/logo/icon_hospital.png" alt="icon">코리아 성형외과의원</span>
+              <div class="hospital-info__score">
+                <span class="hospital-list__score--num">4.0</span>
+                <span class="hospital-list__score--star star-num3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- E: Review Gallery -->
+
+        <!-- S: 리뷰 내용 -->
+        <div class="review-context">
+          <div class="review-context__box">
+            리뷰 내용
+          </div>
+        </div>
+        <!-- E: 리뷰 내용 -->
+
+        <!-- S: 리뷰 댓글 -->
+        <div class="review-list">
+          <div class="review-list__Result-non">
+            <div class="non-data__message">
+              검색결과가 없습니다.
+            </div>
+          </div>
+        </div>
+        <!-- E: 리뷰 댓글 -->
+      </div>
+
+      <div class="review-inputBottom">
+        <div class="input-area">
+          <input type="text" class="reply-input" placeholder="댓글을 입력하세요.">
+          <a href="javascript:;" class="reply-btn">Reply</a>
+        </div>        
+      </div>
+    </div>
+    
+
+
+  </div>
+  <script>
+
+    $(".hospital-sns__btn--favor").on("click", function(){
+      if( $(this).hasClass("on") ){
+        $(this).removeClass("on")
+      }else{
+        $(this).addClass("on")
+      }
+    });
+
+    $(".hospital-sns__btn--like").on("click", function () {
+      if ($(this).hasClass("on")) {
+        $(this).removeClass("on")
+      } else {
+        $(this).addClass("on")
+      }
+    })
+    
+  </script>
+</body>
+
+</html>

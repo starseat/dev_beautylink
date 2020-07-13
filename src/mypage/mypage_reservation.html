@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBackMenu_border.html',{
+      title:"Reservation Request"
+    })
+    <div class="wrap__content--t">
+      <div class="content">
+        
+        <div class="reservation-list">
+          <ul>
+                    
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/listjs/reservationList.js"></script>
+  <script>
+    //header Context Menu
+    var headerPopMenu = new HeaderPopMenu();
+    headerPopMenu.add();
+    
+    ReservationList.load();
+    
+    
+  </script>
+</body>
+
+</html>

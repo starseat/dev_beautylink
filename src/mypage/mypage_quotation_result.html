@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBackMenu_border.html',{
+      title:"Quotation Result"
+    })
+    <div class="wrap__content--t">
+      <div class="content">
+        
+        <!-- S: Quotation Result -->
+        <div class="quotation-result">
+          <div class="quotation-result__info">
+            <div class="quotation-info__top">
+              <span class="info-top__date">15 May 2020</span>
+              <div class="info-top__title">Face Contouring</div>
+            </div>
+            <div class="quotation-info__bottom">
+              코 재수술을 원합니다. 5년전에 처음 수술 받고 마음에
+              안들어 다시 받고자 하구요. 직선코 원합니다.
+              코 재수술을 원합니다. 5년전에 처음 수술 받고 마음에
+              안들어 다시 받고자 하구요. 직선코 원합니다.
+            </div>
+          </div>
+          <div class="quotation-result__proposal">
+            <div class="quotation-proposal">
+              <div class="quotation-proposal__title">
+                <span class="proposal-title">PROPOSAL</span>
+              </div>
+              <div class="quotation-proposal__info">
+                <ol>
+                  <li>견적일 : 16 May 2020</li>
+                  <li>병원 : 타코 성형외과</li>
+                  <li>금액 : 700만원</li>
+                </ol>
+              </div>
+              <div class="quotation-proposal__answer">
+                비중격이 없는 것으로 예상되어, 기증연골을 사용하고
+                콧대, 콧볼축소가 같이 병행되어야 효과가 좋습니다.                
+                비용은 700만원 예상되며, 의사선생님 체크 후 비용은
+                변경될 수도 있습니다.
+              </div>
+            </div>            
+          </div>
+        </div>
+        <!-- E: Quotation Result -->
+        <!-- S:Bottom Btn -->
+        <div class="btns-bottom">
+          <button class="btn-consult--blue">Reservation</button>
+        </div>
+        <!-- E:Bottom Btn -->
+      </div>
+    </div>
+  </div>
+  <script>
+    //header Context Menu
+    var headerPopMenu = new HeaderPopMenu();
+    headerPopMenu.add();
+    
+    //filter
+    $(".quotation-filter").on("click", function(){
+      $(".quotation-filter").removeClass("on");
+      $(this).addClass("on");      
+    })
+    
+  </script>
+</body>
+
+</html>

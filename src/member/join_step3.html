@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        @@include('../include/head.html',{ webRoot:"../" })
+    </head>
+
+    <body>
+        <div class="wrap">
+            @@include('../include/header_member.html',{ title:"Member Registration 3/4" })
+            <div class="wrap__content--tb">
+                <div class="content">
+                    <div class="join">
+                        <div class="join-input">
+                            <div class="join-input__row">
+                                <div class="input-title">
+                                    <label class="join-title">Name</label>
+                                </div>
+                                <div class="text-input__wrapper mb5">
+                                    <input
+                                        type="text"
+                                        name="surname"
+                                        class="join-input surname clearInput"
+                                        placeholder="Surname">
+                                </div>
+                                <div class="text-input__wrapper">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        class="join-input name clearInput"
+                                        placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="join-input__row mt10">
+                                <div class="input-title">
+                                    <label class="join-title">Mobile(contact)</label>
+                                </div>
+                                <div class="text-input__wrapper">
+                                    <input
+                                        type="number"
+                                        name="phone"
+                                        maxlength="10"
+                                        oninput="maxLengthCheck(this)"
+                                        class="join-input phone clearInput"
+                                        placeholder="-없이 휴대폰 번호 숫자만 입력하세요.">
+                                    <div class="input-message"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- S:Bottom Btn -->
+                <div class="btns-bottom bottom-fixed">
+                    <button class="btn-consult--blue btn-next" disabled="disabled" onclick="onNextStep()">Next</button>
+                </div>
+                <!-- E:Bottom Btn -->
+            </div>
+
+        </div>
+        <script>
+
+            $(".clearInput").clearInput({value: ""});
+
+            $(".join-input.surname, .join-input.name").keyup(function (evt) {
+                validate();
+            });
+
+            //번호입력 Max 체크
+            function maxLengthCheck(object) {
+                if (object.value.length > object.maxLength) {
+                    object.value = object
+                        .value
+                        .slice(0, object.maxLength);
+                }
+                validate();
+            }
+
+            function validate(){
+                var surname = $(".join-input.surname");
+                var name = $(".join-input.name");
+                var phone = $(".join-input.phone");
+
+                if( surname.val().length > 0 && name.val().length > 0 && phone.val().length > 0 ){
+                    $(".btn-next").removeAttr("disabled");
+                }else{
+                    $(".btn-next").attr("disabled", "disabled");
+                }
+            }
+
+            function onNextStep() {
+                var surName = $(".join-input.surname").val();
+                var name = $(".join-input.name").val();
+                var phone = $(".join-input.phone").val();
+                console.log(surName, " / ", name, " / ", phone);
+                
+                location.href = 'join_step4.html'
+            }
+        </script>
+    </body>
+
+</html>

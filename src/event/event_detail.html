@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('../include/head.html',{
+  webRoot:"../"
+  })
+</head>
+
+<body>
+  <div class="wrap">
+    @@include('../include/header_sub_useBack.html',{
+      title:"할인 이벤트 - 1주년 기념행사 진행중 "
+    })
+    <div class="wrap__content--t">
+      <div class="content">
+        <!-- S:Event Banner -->
+        <div class="event-main">
+          <div class="event-main__banner">
+            <img src="../images/main_banner1.png" alt="banner">
+          </div>
+        </div>
+        <!-- E:Event Banner -->
+
+        <!-- S: 병원 점수 및 기타 링크 -->
+        <div class="hospital-sns">
+          <div class="hospital-sns__score">
+            <div class="hospital-list__score score-sns">
+              <span class="hospital-list__score--num">4.0</span>
+              <div class="hospital-list__divide">
+                <span class="hospital-list__score--score">168</span>
+                <span class="hospital-list__score--star star-num3"></span>
+              </div>
+            </div>
+          </div>
+          <div class="hospital-sns__item">
+            <ul>
+              <li>
+                <a href="javascript:;" class="hospital-sns__btn--favor"><span class="icon-sns"></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="hospital-sns__btn--like"><span class="icon-sns"></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="hospital-sns__btn--share"><span class="icon-sns"></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="hospital-sns__btn--contact"><span class="icon-sns"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- E: 병원 점수 및 기타 링크  -->
+
+        <!-- S: 병원 상세정보 링크 배너 -->
+        <div class="hospital-detail">
+          <div class="hospital-detail__banner">
+            <span class="hospital-detail__banner--logo"><img src="../images/logo/icon_3.png" alt="logo"></span>
+            <div class="hospital-detail__banner--title">코리아 성형외과</div>
+            <div class="hospital-detail__banner--address">476 Gangnam-daero, Nonhyeon-dong, Gangn476 Gangnam-daero, Nonhyeon-dong, Gangn</div>
+            <a href="javascript:;" class="hospital-detail__btn--link">Link</a>
+          </div>
+        </div>
+        <!-- E: 병원 상세정보 링크 배너 -->
+
+        <!-- S: Best Review Top3 -->
+        <div class="best-top3">
+          <div class="price-list__top">
+            <h2 class="main-title">Best Review Top <strong>3</strong></h2>
+          </div>
+          <div class="pick-hospital__photo-list">
+            <ul>
+              <li>
+                <img src="../images/sample/photo1.png" alt="photo" width="100%" height="auto">
+                <div class="pick-photo__info">
+                  <p class="pick-photo__info--name">홍길동</p>
+                </div>
+              </li>
+              <li>
+                <img src="../images/sample/photo2.png" alt="photo" width="100%" height="auto">
+                <div class="pick-photo__info">
+                  <p class="pick-photo__info--name">홍길동</p>
+                </div>
+              </li>
+              <li>
+                <img src="../images/sample/photo3.png" alt="photo" width="100%" height="auto">
+                <div class="pick-photo__info">
+                  <p class="pick-photo__info--name">홍길동</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- E: Best Review Top3 -->
+
+        <div class="title-middle">
+          <h3 class="title-middle__text">원데이 리프팅</h3>
+        </div>
+
+        <!-- S: 시술 상세정보-->
+        <div class="surgery-detail">
+          <div class="surgery-detail__box">
+            이벤트 상세내용
+          </div>
+        </div>
+        <!-- E: 시술 상세정보-->
+
+      </div>
+    </div>
+    
+    <!-- S:Bottom Btn -->
+    <div class="btns-bottom">
+      <button class="btn-consult--blue"><span class="icon-consult"></span>Consult Right Away</button>
+    </div>
+    <!-- E:Bottom Btn -->
+
+  </div>
+  <script>
+    //Sticky 
+    var stickbar = new StickyBar(".hospital-sns");
+
+    $(".hospital-sns__btn--favor").on("click", function(){
+      if( $(this).hasClass("on") ){
+        $(this).removeClass("on")
+      }else{
+        $(this).addClass("on")
+      }
+    });
+
+    $(".hospital-sns__btn--like").on("click", function () {
+      if ($(this).hasClass("on")) {
+        $(this).removeClass("on")
+      } else {
+        $(this).addClass("on")
+      }
+    })
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        @@include('./include/head.html',{
+          webRoot:"./"
+        })
+    </head>
+    <body>
+        <div class="wrap">
+            @@include('./include/header.html')
+            <div class="wrap__content--tb">
+              <div class="content">
+                  <section class="main-banner">
+                      <div class="swiper-container banner__swiper">
+                        <div class="swiper-wrapper">
+                          <!-- List -->
+                        </div>
+                        <div class="banner-pagination"></div>
+                      </div>
+                  </section>
+
+                  <!-- S: Pick Preview -->
+                  <section class="pick-preview">
+                    <div class="pick-preview__top">
+                      <h2 class="main-title">Pick Review</h2>
+                      <div class="pick-preview__pagination"></div>
+                      <div class="pick-preview__player--btn on">
+                        <span class="pick-preview__player--icon"></span>
+                      </div>
+                      <span class="btn-more__plug--btn">MORE</span>
+                    </div>                    
+                    <div class="pick-preview__bottom">
+                      <div class="pick-preview__list swiper-container">
+                        <div class="swiper-wrapper">
+                          <!-- List -->
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <!-- E: Pick Preview -->
+
+                  <!-- S: Price List-->
+                  <section class="price-list">
+                    <div class="price-list__top">
+                      <h2 class="main-title">Price List</h2>
+                      <span class="btn-more__plug--btn">MORE</span>
+                    </div>
+                    <div class="price-list__bottom">
+                      <ul class="price-list__list">
+                        <!-- List -->
+                      </ul>
+                    </div>
+                  </section>
+                  <!-- E: Price List-->
+              </div>
+            </div>
+            @@include('./include/footer.html')
+        </div>        
+        <script type="text/javascript" src=./js/main.js></script>
+        <script type="text/javascript" src=./js/listjs/hospitalBannerList.js></script>
+        <script>
+          HospitalBannerList.load("./data/price_list.json");
+        </script>
+        
+    </body>
+</html>
