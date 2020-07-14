@@ -1,0 +1,68 @@
+[
+  {
+    "hospitalName": "코리아 성형외과의원",
+    "title": "절개눈매교정",
+    "info": "생기 발랄하게 탁 트인 눈매!",
+    "price": "1,660,000",
+    "score": 4,
+    "like": 10,
+    "likeCheck": true,
+    "favorCheck": false,
+    "url": "../images/banner/banner_1.png"
+  },
+  {
+    "hospitalName": "비앤빛 강남밝은세상안과",
+    "title": "라식.라섹",
+    "info": "단 한명의 눈을 위한 100인 시스템 대한민국 시력교정의 리더 대한민국 시력교정의 리더 시력교정 대한민국 시력교정의 리더 시력교정",
+    "price": "700,000",
+    "score": 3,
+    "like": 5,
+    "likeCheck": false,
+    "favorCheck": true,
+    "url": "../images/banner/banner_2.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원1",
+    "title": "절개눈매교정",
+    "info": "생기 발랄하게 탁 트인 눈매!",
+    "price": "1,660,000",
+    "score": 4,
+    "like": 10,
+    "likeCheck": false,
+    "favorCheck": false,
+    "url": "../images/banner/banner_3.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원2",
+    "title": "절개눈매교정",
+    "info": "생기 발랄하게 탁 트인 눈매!",
+    "price": "1,660,000",
+    "score": 5,
+    "like": 10,
+    "likeCheck": false,
+    "favorCheck": true,
+    "url": "../images/banner/banner_4.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원1",
+    "title": "절개눈매교정",
+    "info": "생기 발랄하게 탁 트인 눈매!",
+    "price": "1,660,000",
+    "score": 4,
+    "like": 10,
+    "likeCheck": false,
+    "favorCheck": false,
+    "url": "../images/banner/banner_1.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원2",
+    "title": "절개눈매교정",
+    "info": "생기 발랄하게 탁 트인 눈매!",
+    "price": "1,660,000",
+    "score": 5,
+    "like": 10,
+    "likeCheck": false,
+    "favorCheck": true,
+    "url": "../images/banner/banner_2.png"
+  }
+]

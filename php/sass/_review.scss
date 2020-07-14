@@ -1,0 +1,530 @@
+.hospital-search{
+  padding: 5px $side-padding 5px $side-padding;
+}
+.review-slideBanner{
+  padding: 0;  
+  .main-title{
+    color: #fff;
+  }
+  .swiper-pagination-current{
+    color: #eeeded;
+  }
+  .pick-preview{
+    &__top{
+      background-color: #ee3764;
+      padding: 0 $side-padding 0 $side-padding;
+    }
+    &__bottom{    
+      position: relative;
+      padding: 0 $side-padding 0 $side-padding;
+      &::before{
+        content:'';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 70%;
+        background: #ee3764;
+      }
+    }
+    &__pagination{
+      color: #cccccc;
+    }
+  }
+}
+
+
+
+
+.pick-review__list{
+  .swiper-slide{
+    width: 70%;
+  }
+  .review-item{
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    &__top{
+      &::after{
+        @include clearfix();
+      }
+      li{        
+        width: 50%;
+        float: left;
+        padding: 2px;
+        box-sizing: border-box;
+        &:nth-child(1){
+          padding-right: 1px;
+        }
+        &:nth-child(2){
+          padding-left: 1px;
+        }
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    &__bottom{
+      padding: 3px 10px 8px 10px;  
+      .review-keyword{
+        font-size: 12px;
+        @include textEllipsis(1);
+      }
+      .review-hospital{
+        padding-top: 4px;
+        padding-left: 20px;
+        font-size: 12px;
+        position: relative;   
+        @include textEllipsis(1);     
+        .icon-logo{
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          vertical-align: middle;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          img{
+            width: 17px;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+.clean-review{
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-bottom:10px;
+  &__top{
+    .main-title {
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none;
+      padding-top: 10px;
+      padding-left: 4px;
+    }
+  }
+  &__bottom{
+    &::after{
+      @include clearfix();
+    }
+    li{
+      float: left;
+      width: 33.33333%;
+      box-sizing: border-box;
+      padding: 0 4px;
+      margin-bottom: 7px;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }    
+  }
+  &__name{
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+.review-navi{
+  .hospital-sns{
+    &__item{
+      position: relative;
+      right: inherit;
+      top: inherit;
+      float: left;
+      &:first-child{
+        width: 45%;
+        li{
+          width: 50%;
+          margin: 0;
+        }
+      }
+      &:last-child{
+        width: 55%;
+        li{
+          width: 25%;
+          margin: 0;
+        }
+      }
+    }    
+  }
+  .hospital-sns{
+    &__btn--favor, &__btn--like{
+      width: auto !important;
+      padding-left: 25px;
+      padding-right: 10px;
+      position: relative;
+      font-size: 13px;
+    }
+    &__btn--favor{
+      margin-left: 15px;
+      top: -2px;
+      position: relative;
+      .icon-sns{
+        left: 14px !important;
+        top: 20px;
+      }
+      .favor-num{
+        top: 9px;
+        position: relative;
+      }
+    }
+    &__btn--like{    
+      margin-left: 15px;  
+      top: -2px;
+      position: relative;
+      .icon-sns{
+        left: 10px !important;
+        top: 20px;
+      }
+      .like-num{
+        top: 9px;
+        position: relative;
+      }
+    }
+    &__btn--write{
+      .icon-sns{      
+        width: 17px;
+        height: 17px;
+        background: url(../images/icon_write.png) no-repeat 0 0;
+        background-size: 17px auto;
+      }
+    }
+    &__btn--return{
+      .icon-sns{      
+        width: 18px;
+        height: 17px;
+        background: url(../images/icon_return.png) no-repeat 0 0;
+        background-size: 18px auto;
+      }
+    }
+  }
+}
+
+.review-gallery{  
+  border-bottom: 1px solid #e9ebf4;
+  &__top{
+    height: 70px;    
+    position: relative;
+    padding: 0 $side-padding;
+    padding-left: 65px;
+  }
+  &__icon{ 
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff url(../images/icon_person.png) no-repeat 50% 50%;
+    background-size: 22px auto;
+    border: 1px solid #cccccc;
+    position: absolute;
+    left: 13px;
+    top: 14px;
+  }
+  &__name{
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 12px;
+  }
+  &__date{
+    font-size: 12px;
+  }
+  &__list{
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    &::-webkit-scrollbar {
+        display: none; 
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+    ul{
+      display: flex;
+    }    
+  }
+  &__photo{
+    margin-right: 6px;   
+    position: relative;
+    &:first-child{
+      padding-left: 13px;
+    }
+    &:last-child{
+      padding-right: 13px;
+      .photo-state{
+        right: 13px;
+      }
+    }
+    img{
+      width: 95px;
+      height: auto;
+    }
+    .photo-state{
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(0,0,0, 0.7);
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 5px;
+    }
+  }
+  &__bottom{
+    padding: 2px $side-padding 8px $side-padding;
+    .surgical-info, .hospital-info{
+      position: relative;
+      padding: 1px 0;
+      &__name{
+        font-size: 12px;
+      }
+      img{
+        width: 15px;
+        height: auto;
+        vertical-align: middle;
+        margin-right: 4px;
+        margin-top: -3px;
+      }
+      &__score{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  
+}
+
+.review-context__menu{
+    position: absolute;
+    right: $side-padding;
+    top: 20px;
+    .context__btn{
+      position: relative;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #e9ebf4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .context-icon{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #2d3a7e;
+        &:after, &:before{
+          content:'';
+          display: inline-block;
+          width: 4px;
+          height: 4px;
+          background-color: #2d3a7e;
+          position: absolute;
+          top: 50%;
+          left: 50%;          
+        }
+        &:after{
+          transform: translate(-50%, 4px);
+        }
+        &:before{
+          transform: translate(-50%, -8px);
+        }
+      } 
+      &.on{
+        background-color: #f9ddde !important;
+        .context-icon{
+          background-color: #de365f !important;
+          &:after, &:before{
+            background-color: #de365f !important;
+          }
+        }
+        + .context-list{
+          display: inline-block;
+        }
+      }     
+    }
+
+    .context-list{
+      position: absolute;
+      right: 0;
+      top: 30px;
+      z-index: 2;
+      width: 85px;
+      background-color: #fff;
+      border: 1px solid #2d3a7e;
+      box-sizing: border-box;  
+      display: none;    
+      &__btn{
+        display: block;
+        padding: 3px 0 3px 10px;
+        font-size: 14px;
+      }
+    }
+    
+  }
+
+.review-context{
+  padding: $side-padding;
+  border-bottom: 1px solid #e9ebf4;
+  &__box{
+    font-size: 12px;
+  }
+}
+
+.review-list{
+  &__item{
+    &:nth-child(2n-1){
+      background-color: #f4f5f9;
+    }
+    border-bottom: 1px solid #e9ebf4;
+    position: relative;    
+    padding: 0 $side-padding 10px 0; 
+    .review-item{
+      &__icon{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #fff url(../images/icon_person.png) no-repeat 50% 50%;
+        background-size: 22px auto;
+        border: 1px solid #cccccc;
+        position: absolute;
+        left: 13px;
+        top: 12px;
+      }
+      &__name{
+        font-size: 16px;
+        font-weight: bold;
+        padding-top: 11px;
+        padding-left: 65px;
+      }
+      &__date{
+        font-size: 11px;
+        line-height: 14px;
+        padding-left: 65px;
+      }
+      &__content{    
+        font-size: 12px;
+        padding: 5px 0 10px 0;
+        padding-left: 65px;
+      }
+      &__reply{
+        color: #2d3a7e;
+        font-size: 12px;
+        padding-top: 10px;
+        padding-left: 62px;
+        background: url(../images/icon_replay.png) no-repeat 25px 8px;
+        background-size: 24px auto;
+        display: flex;
+        .reply-name{
+          white-space: nowrap;
+          padding-right: 10px;
+        }
+      }
+    }
+    
+  }
+
+  
+  
+  &__btns{
+    text-align: right;
+    .btn__edit, .btn__delete, .btn__reply, .btn__report{
+      color: #2d3a7e;
+      font-size: 11px;
+      padding: 4px 6px;
+      font-weight: bold;
+    }  
+    &.btn-editable{
+      display: inline-block;
+      margin-top: -2px;
+      margin-left: 10px;
+    }   
+  }
+
+  &__Result-non{
+    text-align: center;
+    padding-top: 45px;
+  }
+}
+
+.review-inputBottom{
+  height: 49px;
+  border-top: 1px solid #2d3a7e;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  .input-area{
+    height: 49px;
+    position: relative;
+    padding-right: 50px;
+    .reply-input{
+      height: 49px;
+      width: 100%;
+      border: none;
+      box-sizing: border-box;
+      padding-left: $side-padding;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .reply-btn{
+      display: inline-block;
+      width: 49px;
+      height: 49px;
+      background:url(../images/icon_replyArrow.png) no-repeat 50%;
+      background-size: 20px auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      @include textIndent();
+    }
+  }
+  &.report-color{
+    border-top: 1px solid #de365f;
+    .reply-input{
+      color: #de365f;
+    }
+    .reply-btn{
+      background:url(../images/icon_replyArrow_red.png) no-repeat 50%;
+      background-size: 20px auto;
+    }
+  }
+}
+
+
+
+@supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+  .review-navi{
+    .hospital-sns{
+      &__btn--favor{      
+        .favor-num{
+          top: 12px;       
+        }
+      }
+      &__btn--like{
+        .like-num{
+          top: 12px;
+        }
+      }
+    }
+  } 
+}
+

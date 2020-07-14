@@ -1,0 +1,43 @@
+[
+  {
+    "hospitalName": "코리아 성형외과의원",
+    "date": "2020.05.01 ~ 2020.05.03",    
+    "price": "1,660,000",
+    "like": 10,
+    "logoUrl": "../images/logo/icon_hospital.png",
+    "bannerUrl": "../images/banner/event_banner2.png"
+  },
+  
+  {
+    "hospitalName": "코리아 성형외과의원",
+    "date": "2020.05.01 ~ 2020.05.03",
+    "price": "1,660,000",
+    "like": 5,
+    "logoUrl": "../images/logo/icon_hospital.png",
+    "bannerUrl": "../images/banner/event_banner.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원",
+    "date": "2020.05.01 ~ 2020.05.03",
+    "price": "1,660,000",
+    "like": 20,
+    "logoUrl": "../images/logo/icon_hospital.png",
+    "bannerUrl": "../images/banner/event_banner.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원",
+    "date": "2020.05.01 ~ 2020.05.03",
+    "price": "1,660,000",
+    "like": 33,
+    "logoUrl": "../images/logo/icon_hospital.png",
+    "bannerUrl": "../images/banner/event_banner2.png"
+  },
+  {
+    "hospitalName": "코리아 성형외과의원",
+    "date": "2020.05.01 ~ 2020.05.03",
+    "price": "1,660,000",
+    "like": 10,
+    "logoUrl": "../images/logo/icon_hospital.png",
+    "bannerUrl": "../images/banner/event_banner.png"
+  }
+]

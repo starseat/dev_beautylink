@@ -1,0 +1,50 @@
+
+.event-main{
+  &__banner{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.event-main{  
+  &__banner{
+    position: relative; 
+    .event-today__icon{
+      position: absolute;
+      left: 10px;
+      top: 10px; 
+    }
+  }  
+}
+.event-today__icon{
+  display: inline-block;  
+  color: #fff; 
+  font-size: 12px;
+  font-weight: bold;
+  background: rgba(0,0,0, 0.7) url(../images/icon_today.png) no-repeat 4px 50%;
+  background-size: 12px auto;
+  padding: 1px 6px 1px 19px;
+  border-radius: 3px;
+  line-height: 17px;
+}
+
+.info-brief{
+  background-color: #e9ebf4;  
+  padding:13px;
+  padding-right: 38px;
+  font-size: 14px;
+  &__text{
+
+  }
+  &__text--point{
+    background: url(../images/icon_brief.png) no-repeat 0 5px;    
+    background-size: 17px auto;
+    padding-left: 25px;
+  }  
+}
+
+.quotation-photo {
+  padding:13px 9px 0 9px;  
+}
