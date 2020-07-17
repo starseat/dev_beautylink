@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+<title>Beauty Link Korea</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="title" content="Beauty Link Korea">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+<link rel="canonical" href="http://www.beautylinkkorea.com/">
+
+<meta name="keywords" content="Beauty Link Korea">
+<meta name="description" content="Beauty Link Korea">
+
+<meta name="twitter:card" content="Summary">
+<meta name="twitter:site" content="@BeautyLinkKorea">
+<meta name="twitter:creator" content="@BeautyLinkKorea">
+<meta name="twitter:url" content="http://www.beautylinkkorea.com/">
+<meta name="twitter:title" content="Beauty Link Korea">
+<meta name="twitter:description" content="Beauty Link Korea">
+<meta name="twitter:image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta property="og:url" content="http://www.beautylinkkorea.com/">
+<meta property="og:image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beauty Link Korea">
+<meta property="og:locale" content="ko">
+<meta property="og:title" content="Beauty Link Korea">
+<meta property="og:description" content="Beauty Link Korea">
+<meta property="og:country-name" content="sec">
+
+<meta itemprop="name" content="Beauty Link Kore">
+<meta itemprop="image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta itemprop="url" content="http://www.beautylinkkorea.com/">
+<meta itemprop="description" content="Beauty Link Korea">
+<meta itemprop="keywords" content="Beauty Link Korea">
+
+<link rel="stylesheet" href=./css/beauty.min.css>
+
+<script type="text/javascript" src=./js/plugin/jquery-3.4.1.min.js></script>
+<script type="text/javascript" src=./js/plugin/swiper.min.js></script>
+<script type="text/javascript" src=./js/plugin/beauty.clearInput.js></script>
+<script type="text/javascript" src=./js/plugin/moment-with-locales.js></script>
+<script type="text/javascript" src=./js/plugin/daterangepicker.js></script>
+<script type="text/javascript" src=./js/uiControl.common.js></script>
+<script type="text/javascript" src=./js/plugin/beauty.dialogWindow.js></script>
+
+  <style>
+    .btn-wrap{ padding: 20px;}
+    .btn-wrap ul li{padding: 5px 0;}
+    .test-btn{ display:block; text-align: center; background: rgb(92, 92, 92); width: 100%; color: #fff; padding: 10px 0; }
+  </style>
+</head>
+
+<body>
+  <div class="btn-wrap">
+    <ul>  
+      <li><button class="test-btn" onClick="normalDialog()">확인창</li>
+      <li><button class="test-btn" onClick="confirmDialog()">Confirm 창</li>
+    </ul>
+  </div>
+  <script>
+    function confirmDialog() {
+        $("body").dialogWindow({
+          type: 'confirm',
+          message: '신청하시겠습니까?',
+          onConfirm: function (e) {
+            console.log("예");
+          },
+          onCancel: function (e) {
+            console.log("아니오");
+          },
+          customBtnName: { confirm: "예", cancel: "아니오" }
+        });
+      }
+
+      function normalDialog() {
+        $("body").dialogWindow({
+          type: 'normal',
+          message: '테스트 확인창입니다.<br>테스트?',
+          onConfirm: function (e) {
+            console.log("확인");
+          }
+        });
+      }  
+  </script>
+</body>
+
+</html>

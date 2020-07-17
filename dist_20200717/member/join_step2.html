@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+<title>Beauty Link Korea</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="title" content="Beauty Link Korea">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+<link rel="canonical" href="http://www.beautylinkkorea.com/">
+
+<meta name="keywords" content="Beauty Link Korea">
+<meta name="description" content="Beauty Link Korea">
+
+<meta name="twitter:card" content="Summary">
+<meta name="twitter:site" content="@BeautyLinkKorea">
+<meta name="twitter:creator" content="@BeautyLinkKorea">
+<meta name="twitter:url" content="http://www.beautylinkkorea.com/">
+<meta name="twitter:title" content="Beauty Link Korea">
+<meta name="twitter:description" content="Beauty Link Korea">
+<meta name="twitter:image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta property="og:url" content="http://www.beautylinkkorea.com/">
+<meta property="og:image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beauty Link Korea">
+<meta property="og:locale" content="ko">
+<meta property="og:title" content="Beauty Link Korea">
+<meta property="og:description" content="Beauty Link Korea">
+<meta property="og:country-name" content="sec">
+
+<meta itemprop="name" content="Beauty Link Kore">
+<meta itemprop="image" content="http://www.beautylinkkorea.com/image/logo-image-letter.png">
+<meta itemprop="url" content="http://www.beautylinkkorea.com/">
+<meta itemprop="description" content="Beauty Link Korea">
+<meta itemprop="keywords" content="Beauty Link Korea">
+
+<link rel="stylesheet" href=../css/beauty.min.css>
+
+<script type="text/javascript" src=../js/plugin/jquery-3.4.1.min.js></script>
+<script type="text/javascript" src=../js/plugin/swiper.min.js></script>
+<script type="text/javascript" src=../js/plugin/beauty.clearInput.js></script>
+<script type="text/javascript" src=../js/plugin/moment-with-locales.js></script>
+<script type="text/javascript" src=../js/plugin/daterangepicker.js></script>
+<script type="text/javascript" src=../js/uiControl.common.js></script>
+<script type="text/javascript" src=../js/plugin/beauty.dialogWindow.js></script>
+
+    </head>
+
+    <body>
+        <div class="wrap">
+            
+<header class="header">
+  <div class="header__title-wrap--back header-border">
+    <a href="javascript:;" class="header__btn-back">Back</a><h1 class="header__title">Member Registration 2/4</h1>
+  </div>
+</header>
+
+            <div class="wrap__content--tb">
+                <div class="content">
+                    <div class="join">
+                        <div class="join-input">
+                            <div class="join-input__row">
+                                <div class="input-title">
+                                    <label class="join-title">Password</label>
+                                </div>
+                                <div class="text-input__wrapper">
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        class="join-input password clearInput"
+                                        placeholder="영문 숫자 특수문자 포함 8~16자로 조합해 주세요.">
+                                    <div class="input-message password"></div>
+                                </div>
+                            </div>
+                            <div class="join-input__row mt10">
+                                <div class="input-title">
+                                    <label class="join-title">Password Confirm</label>
+                                </div>
+                                <div class="text-input__wrapper">
+                                    <input
+                                        type="password"
+                                        name="passwordConfirm"
+                                        class="join-input passwordConfirm clearInput"
+                                        placeholder="비밀번호 확인을 위해 한 번 더 입력해 주세요.">
+                                    <div class="input-message passwordConfirm"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- S:Bottom Btn -->
+                <div class="btns-bottom bottom-fixed">
+                    <button
+                        class="btn-consult--blue btn-next"
+                        disabled="disabled"
+                        onclick="onNextStep()">Next</button>
+                </div>
+                <!-- E:Bottom Btn -->
+            </div>
+
+        </div>
+        <script>
+
+            $(".clearInput").clearInput({
+                value: "",
+                onClear: function (e) {
+                    var selector = e.selector;
+                    var result = selector.next(".input-message");
+                    resetInput(selector, result);
+                }
+            });
+
+            $(".join-input.password").keyup(function (evt) {
+                var selector = $(evt.target);
+                var value = selector.val();
+                validate(selector, value);
+            });
+
+            $(".join-input.passwordConfirm").keyup(function (evt) {
+                var password = $(".join-input.password").val();
+                var selector = $(evt.target);
+                var confirmPass = selector.val();
+
+                var result = $(".input-message.passwordConfirm");
+                if (confirmPass.length === 0) {
+                    resetInput(selector, result)
+                    return
+                }
+                if (password != confirmPass) {
+                    result.text("비밀번호가 일치하지 않습니다. ");
+                    selector
+                        .closest(".text-input__wrapper")
+                        .removeClass("complete")
+                        .addClass("warning");
+                    $(".btn-next").attr("disabled", "disabled");
+                } else {
+                    if ($(".join-input.password").closest(".text-input__wrapper").hasClass("complete")) {
+                        result.text("비밀번호가 일치합니다. ");
+                        selector
+                            .closest(".text-input__wrapper")
+                            .removeClass("warning")
+                            .addClass("complete");
+
+                        $(".btn-next").removeAttr("disabled");
+                    }
+                }
+            });
+
+            function validatePassword(pass) {
+                var re = /^.*(?=^.{8,16}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+                return re.test(pass);
+            }
+
+            function validate(selector, value) {
+                var result = $(".input-message.password");
+                var pass = value;
+                if (pass.length === 0) {
+                    resetInput(selector, result)
+                    return
+                }
+
+                if (validatePassword(pass)) {
+                    result.text("패스워드가 정상 입력되었습니다.");
+                    selector
+                        .closest(".text-input__wrapper")
+                        .removeClass("warning")
+                        .addClass("complete");                    
+                } else {
+                    result.text("영문 숫자 특수문자 포함 8~16자로 조합해 주세요.");
+                    selector
+                        .closest(".text-input__wrapper")
+                        .removeClass("complete")
+                        .addClass("warning");                   
+                }
+                return false;
+            }
+
+            function resetInput(selector, result) {
+                result.text("");
+                selector
+                    .closest(".text-input__wrapper")
+                    .removeClass("warning complete");
+                $(".btn-next").attr("disabled", "disabled");
+            }
+
+            function onNextStep() {
+                var password = $(".password").val();
+                var confirmPassword = $(".passwordConfirm").val();
+                if (password != confirmPassword) {
+                    alert("패스워드가 동일하지 않습니다.");
+                    return false;
+                }
+                location.href = 'join_step3.html'
+            }
+        </script>
+    </body>
+
+</html>

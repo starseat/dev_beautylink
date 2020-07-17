@@ -1,0 +1,32 @@
+[
+    {
+      "userName": "김지호",
+      "url": "./images/sample/photo1.png",
+      "info":"뒤트임, 밑트임, 코, 머리"
+    },
+    {
+      "userName": "박효훈",
+      "url": "./images/sample/photo2.png",
+      "info": "뒤트임, 밑트임, 코, 머리"
+    },
+    {
+      "userName": "최은지",
+      "url": "./images/sample/photo3.png",
+      "info": "뒤트임, 밑트임, 코, 머리"
+    },
+    {
+      "userName": "김지호",
+      "url": "./images/sample/photo1.png",
+      "info": "뒤트임, 밑트임, 코, 머리"
+    },
+    {
+      "userName": "박효훈",
+      "url": "./images/sample/photo2.png",
+      "info": "뒤트임, 밑트임, 코, 머리"
+    },
+    {
+      "userName": "최은지",
+      "url": "./images/sample/photo3.png",
+      "info": "뒤트임, 밑트임, 코, 머리"
+    }
+]
